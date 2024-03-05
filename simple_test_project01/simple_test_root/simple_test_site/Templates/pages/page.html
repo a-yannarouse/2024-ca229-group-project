@@ -11,9 +11,33 @@
 {% endblock sidenav %}
 
 {% block main_content %}
-	<h1>Welcome to the {{ title }} page!</h1>
-	<p>We're now using the page template.</p>
-	{% autoescape off %}
-	<p>{{ content }}</p>
-	{% endautoescape %}
+    {% if pagename == 'Home' %}
+		<h1>Welcome to our Fitness Website!</h1>
+		<p>We are Group 140 and our names are Sarah, Mahek and A'Yanna.</p>
+	{% elif pagename == 'Core' %}
+		<h1>Core Workout Routine</h1>
+		<h2>Warm-up:</h2>
+		<p>5-10 minutes of light cardio (jumping jacks, jogging in place, or brisk walking)</p>
+
+		<h2>Core Workout Routine:</h2>
+		<ul>
+			<li><strong>Plank:</strong> Hold for 30 seconds to 1 minute</li>
+			<li><strong>Russian Twists:</strong> 20 reps (10 twists on each side)</li>
+			<li><strong>Leg Raises:</strong> 15 reps</li>
+			<li><strong>Bicycle Crunches:</strong> 20 reps (10 crunches on each side)</li>
+			<li><strong>Mountain Climbers:</strong> 30 seconds</li>
+			<li><strong>Side Plank:</strong> Hold for 30 seconds to 1 minute on each side</li>
+			<li><strong>Dead Bug:</strong> 15 reps (alternating sides)</li>
+			<li><strong>Superman Exercise:</strong> 15 reps</li>
+		</ul>
+		<h2>Cool Down:</h2>
+		<p>5-10 minutes of stretching, focusing on the core muscles (cobra stretch, child's pose, and torso twists)</p>
+</body>
+    {% else %}
+        <h1>Welcome to {{ title }}!</h1>
+        <p></p>
+        {% autoescape off %}
+        <p>{{ content }}</p>
+        {% endautoescape %}
+    {% endif %}
 {% endblock main_content %}

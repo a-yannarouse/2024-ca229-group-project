@@ -31,9 +31,9 @@
 		</aside>
 		<section id="main">
 			{% block main_content %}
-				<h1>Welcome to our Fitness Website!</h1>
+				<h1>{{ title }}</h1>
 				{% autoescape off %}
-				<p>We are Group 140 and our names are Sarah, Mahek and A'Yanna.</p>
+				<p>{{ content}}</p>
 				{% endautoescape %}
 			{% endblock main_content %}
 		</section>
