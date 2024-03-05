@@ -12,11 +12,11 @@
 	width: 800px;
 }
 body {
-	background-color: #E0E0E0;
+	background-color: #83a1e3;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 0.9em;
 	text-align: justify;
-	color: #474747;
+	color: #381a7a;
 }
 #footer {
 	text-align: center;
@@ -27,7 +27,7 @@ body {
 	background-color: #FFFFFF;
 	border-top: thin solid #BBBBBB;
 	clear: both;
-	color: #969696;
+	color: #7077c6;
 }
 #nav li {
 	padding-top: 10px;

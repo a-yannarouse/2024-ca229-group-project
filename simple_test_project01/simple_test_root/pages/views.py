@@ -1,4 +1,4 @@
-from django.http import Http404
+# simple_test_root/pages/views.py
 from django.shortcuts import render
 from .models import Page
 
@@ -11,5 +11,4 @@ def index(request, pagename=''):
         'last_updated': pg.update_date,
         'page_list': Page.objects.all(),
     }
-    
     return render(request, 'pages/page.html', context)
