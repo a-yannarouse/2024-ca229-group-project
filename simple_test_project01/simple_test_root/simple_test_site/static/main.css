@@ -29,6 +29,12 @@ body {
 	clear: both;
 	color: #7077c6;
 }
+#nav {
+	display: none;
+}
+#nav.show {
+	display: block;
+}
 #nav li {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -57,4 +63,40 @@ body {
 }
 #logo {
 	padding: 10px;
+}
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+	transition: background-color 0.3s;
+}
+
+.toggle-button span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #381a7a;
+    margin-bottom: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.toggle-button.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.toggle-button.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-button.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.toggle-button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
