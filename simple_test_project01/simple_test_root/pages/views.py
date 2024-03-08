@@ -43,3 +43,14 @@ def contact(request):
 		'submitted': submitted
 	}
 	return render(request, 'pages/contact.html', context)
+
+def magic_page(request, num1, num2, num3):
+	result = num1 + num2 + num3
+	context = {
+        'num1': num1,
+        'num2': num2,
+        'num3': num3,
+        'result': result,
+		'page_list': Page.objects.all(),
+    }
+	return render(request, 'pages/magic.html', context)
