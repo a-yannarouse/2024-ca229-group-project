@@ -13,6 +13,17 @@
 {% block main_content %}
     <h1>Magic Page</h1>
     <p>Numbers: {{ num1 }}, {{ num2 }}, {{ num3 }}</p>
-    <p>Result: {{ result }}</p>
+    <p>Age: {{ result }}</p>
+
+    {% if workout_video_url %}
+        <iframe width="420" height="345"
+        src="{{ workout_video_url }}">
+    </iframe>
+    {% else %}
+        <p>No workout video found for the given age.</p>
+    {% endif %}
+    
+
+    <a href="/Home/">Back to homepage</a>
 {% endblock main_content %}
 

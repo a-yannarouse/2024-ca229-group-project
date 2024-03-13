@@ -44,13 +44,31 @@ def contact(request):
 	}
 	return render(request, 'pages/contact.html', context)
 
+
+workout_vids = {
+	(10,20) : 'https://www.youtube.com/embed/pj4TVbnIEgk',
+	(21,30) : 'https://www.youtube.com/embed/ge1ALhE-Fqs',
+	(31,40) : 'https://www.youtube.com/embed/StN0-7XLuR4',
+	(41,60) : 'https://www.youtube.com/embed/RNxDmXdG8C0',
+	(61,70) : 'https://www.youtube.com/embed/Ev6yE55kYGw',
+}
+
 def magic_page(request, num1, num2, num3):
 	result = num1 + num2 + num3
+	age = result
+
+	workout_video_url = None
+	for age_range, video_url in workout_vids.items():
+		if age_range[0] <= age <= age_range[1]:
+			workout_video_url = video_url
+			break
+
 	context = {
         'num1': num1,
         'num2': num2,
         'num3': num3,
-        'result': result,
+        'result': age,
+		'workout_video_url': workout_video_url,
 		'page_list': Page.objects.all(),
     }
 	return render(request, 'pages/magic.html', context)
