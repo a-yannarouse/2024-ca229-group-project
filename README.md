@@ -4,10 +4,8 @@
 ## Description
 This is our Django website for CA229 group assignment. Our website is centred around core, upperbody and lowerbody workouts. We also have our [magic page](simple_test_project01/simple_test_root/simple_test_site/Templates/pages/magic.html), which is mainly implemented in our file [views.py](simple_test_project01/simple_test_root/pages/views.py)
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
-## Visuals - Our website demo
+## Visuals - Our Home Page
 A screenshot of our home page can be seen below: ![here](simple_test_project01/simple_test_root/simple_test_site/static/home_screenshot.png)
 
 ## Installation
